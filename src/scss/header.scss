@@ -20,7 +20,7 @@ header {
     transition: color 0.3s ease;
 
     &:hover {
-      color: var(--hover-color);
+      color: var(--color-primary);
     }
   }
 
@@ -89,6 +89,90 @@ header {
       display: flex;
       gap: rem(30);
       align-items: center;
+
+      > li {
+        position: relative;
+      }
     }
+  }
+}
+
+.header__menu > ul > li:hover .header__dropdown-menu {
+  display: block;
+  animation-name: slideDown;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-delay: 0.1s;
+}
+
+.header__dropdown {
+  position: relative;
+  padding-right: rem(19);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(11);
+    height: rem(12);
+    background-image: url("/img/caret.svg");
+    transition: all 0.3s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        transform: rotate(180deg) translateY(50%);
+      }
+    }
+  }
+
+  &-menu {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: rem(5);
+    width: rem(150);
+    box-shadow: 0 rem(4) rem(6) rgba(0, 0, 0, 0.1);
+  }
+
+  &-item {
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    width: 100%;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: rem(15) rem(10);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        a {
+          color: white;
+        }
+
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

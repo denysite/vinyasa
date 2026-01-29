@@ -190,22 +190,69 @@
   <div class="header__bottom">
     <div class="container header__bottom-container">
       <div class="header__logo">
-        <img src="/img/logo-header.svg" alt="logo" />
+        <a href="/"><img src="/img/logo-header.svg" alt="logo" /></a>
       </div>
 
       <nav class="header__menu">
         <ul>
-          <li><a href="/src/pages/index.hbs">Home</a></li>
-          <li><a href="/src/pages/about.hbs">About</a></li>
-          <li><a href="/src/pages/instructors.hbs">Instructors</a></li>
-          <li><a href="/src/pages/classes.hbs">Classes</a></li>
-          <li><a href="/src/pages/gallery.hbs">Gallery</a></li>
-          <li><a href="/src/pages/blog.hbs">Blog</a></li>
-          <li><a href="/src/pages/contact.hbs">Contact</a></li>
+          <li><a
+              class="header__menu-item"
+              href="/src/pages/index.hbs"
+            >Home</a></li>
+          <li><a
+              class="header__menu-item"
+              href="/src/pages/about.hbs"
+            >About</a></li>
+          <li class="header__dropdown">
+            <a
+              class="header__menu-item"
+              href="/src/pages/instructors.hbs"
+            >Instructors</a>
+
+            <ul class="header__dropdown-menu">
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link" href="#">ava miller</a></li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link" href="#">ivan petrov</a></li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link" href="#">sofia mitchell</a></li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link" href="#">maxim smith</a></li>
+            </ul>
+          </li>
+          <li class="header__dropdown">
+            <a
+              class="header__menu-item"
+              href="/src/pages/classes.hbs"
+            >Classes</a>
+
+            <ul class="header__dropdown-menu">
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link" href="#">Ashtanga Yoga</a></li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link" href="#">Bikram Yoga</a></li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link" href="#">Kundalini Yoga</a></li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link" href="#">Hatha Yoga</a></li>
+            </ul>
+          </li>
+          <li><a
+              class="header__menu-item"
+              href="/src/pages/gallery.hbs"
+            >Gallery</a></li>
+          <li><a
+              class="header__menu-item"
+              href="/src/pages/blog.hbs"
+            >Blog</a></li>
+          <li><a
+              class="header__menu-item"
+              href="/src/pages/contact.hbs"
+            >Contact</a></li>
         </ul>
       </nav>
 
-      <div class="header__button button"></div>
+      <button class="header__button blue-button">sign up</button>
     </div>
   </div>
 </header>
