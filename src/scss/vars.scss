@@ -1,0 +1,19 @@
+@use "sass:math";
+
+// FUNCTIONS
+
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+@function em($px, $current: 16) {
+  @return math.div($px, $current) * 1em;
+}
+
+@function percent($px, $from) {
+  @return math.div($px, $from) * 100%;
+}
+
+:root {
+  --hover-color: #5b78cd;
+}

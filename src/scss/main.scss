@@ -1,0 +1,40 @@
+@use "vars.scss" as *;
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("/fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "Roboto Regular", sans-serif;
+  font-size: rem(18);
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 rem(15);
+}
+
+a {
+  color: inherit;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--hover-color);
+  }
+}

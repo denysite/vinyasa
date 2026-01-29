@@ -1,0 +1,151 @@
+/* =========================
+   MODERN CSS RESET
+   2025–2026
+   ========================= */
+
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins & paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Remove default font styles */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* 4. Body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1;
+  font-family: inherit;
+  background: none;
+  color: inherit;
+}
+
+/* 5. Remove list styles */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 6. Remove link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 7. Reset headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* 8. Reset text elements */
+p,
+span,
+strong,
+em,
+small,
+mark,
+del,
+ins,
+sub,
+sup {
+  font: inherit;
+  color: inherit;
+}
+
+/* 9. Reset forms */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  appearance: none;
+}
+
+/* 10. Remove button styles */
+button {
+  cursor: pointer;
+}
+
+/* 11. Remove input number arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* 12. Remove search input styles */
+input[type="search"] {
+  appearance: none;
+}
+
+/* 13. Reset images & media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 14. Reset tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 15. Remove quotes */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+/* 16. Reset hr */
+hr {
+  border: none;
+  height: 0;
+}
+
+/* 17. Remove focus outline (ADD YOUR OWN!) */
+:focus {
+  outline: none;
+}
+
+/* 18. Reset address */
+address {
+  font-style: normal;
+}
+
+/* 19. Reset hidden attribute */
+[hidden] {
+  display: none !important;
+}
