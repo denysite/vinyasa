@@ -1,4 +1,18 @@
 header {
+  &.header-desktop {
+    @media (max-width: em(900)) {
+      display: none;
+    }
+  }
+
+  &.header-mobile {
+    display: none;
+
+    @media (max-width: em(900)) {
+      display: block;
+    }
+  }
+
   .header__top {
     background-color: #33344f;
     color: white;
@@ -63,6 +77,10 @@ header {
 
         .text {
           font-size: rem(14);
+
+          @media (max-width: em(1020)) {
+            font-size: rem(12);
+          }
         }
       }
     }
@@ -71,7 +89,9 @@ header {
   .header__bottom-container {
     padding: rem(19) rem(15);
     display: flex;
+    z-index: 100;
     justify-content: space-between;
+    gap: rem(15);
     align-items: center;
 
     .header__logo {
@@ -89,9 +109,43 @@ header {
       display: flex;
       gap: rem(30);
       align-items: center;
+      flex-wrap: wrap;
 
       > li {
         position: relative;
+      }
+    }
+  }
+
+  .header__burger {
+    width: rem(25);
+    height: rem(21);
+
+    span {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      height: rem(3);
+      border-radius: rem(1);
+      background-color: var(--color-primary);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: rem(3);
+        border-radius: rem(1);
+        background-color: var(--color-primary);
+      }
+
+      &::before {
+        top: rem(-6);
+      }
+
+      &::after {
+        bottom: rem(-6);
       }
     }
   }
@@ -164,6 +218,20 @@ header {
         background-color: var(--color-primary);
       }
     }
+  }
+}
+
+body.menu-opened {
+  overflow: hidden;
+
+  .header__mobileMenu {
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
   }
 }
 

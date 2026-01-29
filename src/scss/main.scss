@@ -20,6 +20,10 @@
 body {
   font-family: "Roboto Regular", sans-serif;
   font-size: rem(18);
+
+  @media (max-width: em(1020)) {
+    font-size: rem(14);
+  }
 }
 
 .container {
@@ -46,6 +50,7 @@ a {
   border-radius: rem(5);
   padding: rem(16) rem(54);
   transition: all 0.3s ease;
+  text-wrap: nowrap;
 
   @media (hover: hover) {
     &:hover {
