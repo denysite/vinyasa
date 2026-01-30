@@ -1,0 +1,116 @@
+footer {
+  background-color: var(--color-footer);
+
+  .footer__top {
+    margin-top: rem(60);
+    padding-bottom: rem(39);
+    display: flex;
+    justify-content: space-between;
+    gap: rem(60);
+    align-items: start;
+
+    border-bottom: rem(1) solid rgba(255, 255, 255, 0.4);
+
+    @media (max-width: em(900)) {
+      flex-direction: column;
+      gap: rem(40);
+    }
+
+    .footer__left {
+      max-width: rem(285);
+      display: flex;
+      flex-direction: column;
+      gap: rem(40);
+
+      @media (max-width: em(900)) {
+        max-width: 100%;
+      }
+
+      p {
+        color: #c3c2c2;
+        font-size: rem(16);
+      }
+
+      .footer__socials ul {
+        color: #d5d5d5;
+        display: flex;
+        gap: rem(22);
+        align-items: center;
+
+        li {
+          max-width: rem(17);
+          width: 100%;
+          aspect-ratio: 1 / 1;
+        }
+      }
+    }
+
+    .footer__right {
+      display: flex;
+      align-items: start;
+      gap: rem(100);
+
+      @media (max-width: em(1020)) {
+        gap: rem(60);
+      }
+
+      @media (max-width: em(900)) {
+        flex-wrap: wrap;
+      }
+
+      &-list {
+        h6 {
+          font-weight: 500;
+          font-size: rem(22);
+          color: white;
+          margin-bottom: rem(23);
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: rem(17);
+          li {
+            a {
+              color: #c1c1c1;
+              line-height: 140%;
+              transition: all 0.3s ease;
+
+              &:hover {
+                color: var(--color-primary);
+              }
+            }
+          }
+        }
+      }
+
+      &-contacts {
+        > li > a {
+          display: flex;
+          align-items: center;
+          gap: rem(10);
+        }
+
+        .icon {
+          max-width: rem(20);
+          width: 100%;
+          aspect-ratio: 1 / 1;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__bottom {
+    text-align: center;
+    color: #b5afaf;
+
+    p {
+      padding: rem(31) 0;
+    }
+  }
+}
