@@ -25,7 +25,6 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: (source, filename) => {
-          // щоб не було рекурсії: vars.scss не має підключати сам себе
           if (filename.replaceAll("\\", "/").endsWith("/src/scss/vars.scss")) {
             return source;
           }

@@ -26,6 +26,16 @@ footer {
         max-width: 100%;
       }
 
+      .footer__logo {
+        max-width: rem(150);
+        width: 100%;
+        aspect-ratio: 150 / 41;
+
+        img {
+          width: 100%;
+        }
+      }
+
       p {
         color: #c3c2c2;
         font-size: rem(16);

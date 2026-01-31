@@ -94,17 +94,6 @@ header {
     gap: rem(15);
     align-items: center;
 
-    .header__logo {
-      max-width: rem(150);
-      width: 100%;
-      flex: 0 0 rem(150);
-      aspect-ratio: 150 / 41;
-
-      img {
-        width: 100%;
-      }
-    }
-
     .header__menu > ul {
       display: flex;
       gap: rem(30);
@@ -151,6 +140,17 @@ header {
   }
 }
 
+.header__logo {
+  max-width: rem(150);
+  width: 100%;
+  flex: 0 0 rem(150);
+  aspect-ratio: 150 / 41;
+
+  img {
+    width: 100%;
+  }
+}
+
 .header__menu > ul > li:hover .header__dropdown-menu {
   display: block;
   animation-name: slideDown;
@@ -162,6 +162,7 @@ header {
 
 .header__dropdown {
   position: relative;
+  z-index: 15;
   padding-right: rem(19);
 
   &::after {
@@ -202,6 +203,7 @@ header {
     text-transform: capitalize;
     transition: all 0.3s ease;
     width: 100%;
+    background-color: #fff;
 
     a {
       display: inline-block;
@@ -222,8 +224,22 @@ header {
 }
 
 .header__mobileMenu {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--color-primary);
+  color: white;
+  padding-bottom: rem(20);
+  overflow-y: auto;
+
   opacity: 0;
   transform: translateX(-100%);
+  pointer-events: none; // щоб не клікався коли закритий
+  visibility: hidden; // щоб не фокусився табом
 }
 
 body.menu-closing {
@@ -238,20 +254,12 @@ body.menu-opened {
   overflow: hidden;
 
   .header__mobileMenu {
-    animation-name: slideLeft;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    visibility: visible;
 
-    overflow-y: auto;
-    position: fixed;
-    z-index: 5;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: var(--color-primary);
-    color: white;
+    animation: slideLeft 0.3s ease forwards;
 
     .header__contacts-time,
     a {
