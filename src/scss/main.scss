@@ -1,24 +1,24 @@
 @font-face {
-  font-family: "Roboto Regular";
-  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+  font-family: 'Roboto Regular';
+  src: url('/fonts/Roboto-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto Bold";
-  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+  font-family: 'Roboto Bold';
+  src: url('/fonts/Roboto-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "Roboto Medium";
-  src: url("/fonts/Roboto-Medium.woff2") format("woff2");
+  font-family: 'Roboto Medium';
+  src: url('/fonts/Roboto-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 
 body {
-  font-family: "Roboto Regular", sans-serif;
+  font-family: 'Roboto Regular', sans-serif;
   font-size: rem(18);
 
   min-height: 100vh;
@@ -72,9 +72,23 @@ a {
 }
 
 h3.section-title {
+  $standard-padding: 20;
+  $before-width: 58;
+  $before-height: 47;
+  $finish-height-padding: $standard-padding + $before-height;
+  $finish-width-padding: $standard-padding + $before-width;
+
   font-size: rem(42);
   font-weight: 700;
   color: black;
+
+  position: relative;
+  padding-top: clamp(rem(47), 4vw, rem($finish-height-padding));
+
+  &.about__title {
+    padding-top: 0;
+    padding-left: clamp(rem(57), 4vw, rem($finish-width-padding));
+  }
 
   display: flex;
   flex-direction: column;
@@ -83,25 +97,28 @@ h3.section-title {
 
   @media (max-width: em(1020)) {
     font-size: rem(33);
+    $before-width: 45;
+    $before-height: 36;
   }
 
   @media (max-width: em(425)) {
     font-size: rem(26);
   }
 
-  > div {
-    width: rem(58);
-    height: rem(47);
+  &::before {
+    content: '';
+    position: absolute;
+    width: rem($before-width);
+    height: rem($before-height);
 
-    @media (max-width: em(1020)) {
-      width: rem(45);
-      height: rem(36);
-    }
+    background-image: url('/img/title-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    > img {
-      width: 100%;
-      height: 100%;
-    }
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -111,4 +128,11 @@ span.bold {
 
 section.margin-top {
   margin-top: clamp(rem(30), 6vw, rem(100));
+}
+
+p.section-subtitle {
+  font-size: rem(20);
+  color: #9d9c9c;
+  text-align: center;
+  margin: rem(20) 0 clamp(rem(20), 4vw, rem(65));
 }
