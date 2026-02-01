@@ -173,6 +173,7 @@
       }
 
       &-subtitle {
+        text-transform: capitalize;
         font-size: rem(16);
 
         @media (max-width: em(1020)) {
@@ -287,6 +288,40 @@
         @media (max-width: em(520)) {
           font-size: rem(19);
         }
+      }
+    }
+  }
+}
+
+.instructors {
+  &__list {
+    &-item {
+      max-width: rem(285);
+      border-radius: rem(5);
+      background-color: #ebebeb;
+
+      .instructors__item-img {
+        width: 100%;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-content {
+        max-width: 75%;
+        margin-inline: auto;
+      }
+
+      .instructors__item-name {
+        color: var(--color-primary);
+        text-transform: capitalize;
+        font-size: rem(24);
+        font-family: 'Roboto Medium';
+        margin-top: rem(25);
+
+        padding-bottom: rem(20);
       }
     }
   }
