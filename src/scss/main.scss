@@ -70,3 +70,45 @@ a {
     }
   }
 }
+
+h3.section-title {
+  font-size: rem(42);
+  font-weight: 700;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(20);
+
+  @media (max-width: em(1020)) {
+    font-size: rem(33);
+  }
+
+  @media (max-width: em(425)) {
+    font-size: rem(26);
+  }
+
+  > div {
+    width: rem(58);
+    height: rem(47);
+
+    @media (max-width: em(1020)) {
+      width: rem(45);
+      height: rem(36);
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+span.bold {
+  font-weight: 700;
+}
+
+section.margin-top {
+  margin-top: clamp(rem(30), 6vw, rem(100));
+}
