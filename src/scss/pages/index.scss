@@ -203,6 +203,11 @@
         bottom: rem(-48);
         left: rem($negative-margin);
 
+        @media (max-width: em(780)) {
+          left: 0;
+          width: 65%;
+        }
+
         img {
           width: 100%;
           height: 100%;
