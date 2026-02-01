@@ -14,10 +14,11 @@
     background-size: cover;
     background-position: center;
 
+    padding-bottom: min(31.25%, 120px) !important;
+
     .hero-content {
       color: #fff;
-      padding: clamp(rem(20), 13.33vw, rem(120)) 0
-        clamp(rem(15), 9.63vw, rem(166));
+      padding: clamp(rem(20), 13.33vw, rem(120)) 0 0;
 
       display: inline-flex;
       flex-direction: column;
@@ -75,8 +76,7 @@
   }
 
   .hero-pagination {
-    bottom: rem(75) !important;
-    position: static;
+    bottom: 11.36% !important;
   }
 
   .swiper-pagination-bullet {
@@ -89,6 +89,15 @@
   .swiper-pagination-bullet-active {
     background-color: var(--color-primary);
   }
+}
+
+.hero {
+  height: auto;
+}
+
+.hero-wrapper,
+.hero-slide {
+  height: auto !important;
 }
 
 .about {
