@@ -309,7 +309,6 @@
   .faq__main-item {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* відстань між header і body */
   }
 
   .faq__item-trigger {
@@ -391,5 +390,119 @@
 
   .faq__item-inner {
     padding: rem(23) clamp(rem(30), 6vw, rem(106)) rem(21) rem(30);
+  }
+}
+
+.feedback {
+  background-color: #f4f4f4;
+  padding: clamp(rem(30), 6vw, rem(100)) 0;
+
+  &__slider {
+    height: auto;
+
+    &-wrapper,
+    &-slide {
+      height: auto !important;
+    }
+
+    &-wrapper {
+      align-items: stretch; // важливо: всі слайди однакової висоти в рядку
+    }
+
+    &-slide {
+      height: auto; // можна лишити auto
+      display: flex; // щоб slide-inner міг розтягнутись
+    }
+
+    &-slide {
+      max-width: rem(285);
+    }
+
+    .slide-inner {
+      width: 100%;
+      height: 100%; // зайняти всю висоту слайда
+      display: flex;
+      flex-direction: column;
+
+      border-radius: rem(5);
+      border: rem(1) solid var(--color-primary);
+
+      .slide__img {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .slide__content {
+        // щоб контент “тягнув” картку, а низ був стабільний
+        display: flex;
+        flex-direction: column;
+        flex: 1; // займає весь доступний простір
+        max-width: 83%;
+        margin-inline: auto;
+        margin-top: rem(25);
+        padding-bottom: rem(22);
+
+        .slide__name {
+          font-size: rem(24);
+          color: black;
+          font-family: 'Roboto Medium';
+        }
+
+        .slide__text {
+          margin-top: rem(15);
+          font-size: rem(16);
+          line-height: 160%;
+          color: #888383;
+          margin-bottom: rem(31);
+        }
+
+        .slide__socials {
+          margin-top: auto; // прибиває іконки вниз на всіх картках
+          display: flex;
+          gap: rem(22);
+          align-items: center;
+          padding-top: rem(19);
+          border-top: rem(1) solid #d8d1d1;
+
+          > li {
+            > a {
+              @media (hover: hover) {
+                &:hover {
+                  > svg {
+                    color: var(--color-primary);
+                  }
+                }
+              }
+
+              > svg {
+                width: rem(17);
+                height: rem(17);
+                transition: all 0.3s ease;
+                color: #928a8a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .feedback__slider-pagination {
+    position: static;
+    margin-top: rem(34);
+
+    .swiper-pagination-bullet {
+      opacity: 1;
+      width: rem(18);
+      height: rem(18);
+      border: rem(1) solid #fff;
+      background-color: #d4d4d4;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: var(--color-primary);
+    }
   }
 }
