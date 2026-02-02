@@ -1,0 +1,52 @@
+.application {
+  padding: rem(118) 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    padding: rem(85) rem(70);
+    background-color: rgba(63, 56, 84, 0.9);
+    border-radius: rem(5);
+
+    .application__left {
+      max-width: rem(565);
+
+      .application__form {
+        &-inputs {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: rem(25);
+        }
+
+        input,
+        select,
+        textarea {
+          background-color: #fff;
+          color: black;
+          padding: rem(16) rem(25);
+          border-radius: rem(5);
+
+          &::placeholder {
+            color: #9f9e9e;
+          }
+        }
+
+        textarea {
+          resize: none;
+          margin-top: rem(20);
+          width: 100%;
+          max-height: rem(263);
+          height: 100%;
+          margin-bottom: rem(25);
+        }
+
+        &-submit {
+          display: block;
+          margin-inline: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<section
+  class="application"
+  style="background-image: url('/img/content/application-bg.png');"
+>
+  <div class="container">
+    <div class="application__left">
+      <h3 class="application__title section-title section-title--white">Submit
+        an application</h3>
+      <p
+        class="application__subtitle section-subtitle section-subtitle--white"
+      >Any questions? Fill out the form and we will contact you shortly.</p>
+
+      <form action="#" class="application__form">
+        <div class="application__form-inputs">
+          <input
+            class="application__input-name"
+            placeholder="Your name *"
+            type="text"
+            required=""
+          />
+          <input
+            type="tel"
+            class="application__input-phone"
+            required=""
+            pattern="^(\+1\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+            placeholder="You phone *"
+          />
+          <input
+            type="email"
+            class="application__input-mail"
+            placeholder="You email"
+          />
+          <select
+            name="application-direction"
+            id="application-direction"
+            class="application__input-direction"
+            aria-placeholder="Choose direction"
+          >
+            <option value="hatha">Hatha yoga</option>
+            <option value="ashtanga">Ashtanga yoga</option>
+            <option value="kundalini">Kundalini</option>
+            <option value="bikram">Bikram</option>
+          </select>
+        </div>
+        <div class="application__form-textarea">
+          <textarea
+            name="application-textarea"
+            id=""
+            placeholder="Message"
+          ></textarea>
+        </div>
+
+        <button
+          class="application__form-submit blue-button"
+          type="submit"
+        >send</button>
+      </form>
+    </div>
+  </div>
+</section>
