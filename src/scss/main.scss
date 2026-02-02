@@ -89,7 +89,6 @@ h3.section-title {
     padding-top: 0;
     padding-left: clamp(rem(57), 4vw, rem($finish-width-padding));
   }
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,6 +119,13 @@ h3.section-title {
     left: 50%;
     transform: translateX(-50%);
   }
+
+  &--white {
+    color: #fff;
+    &::before {
+      background-image: url('/img/white-logo.svg');
+    }
+  }
 }
 
 span.bold {
@@ -134,5 +140,10 @@ p.section-subtitle {
   font-size: rem(20);
   color: #9d9c9c;
   text-align: center;
+  line-height: 150%;
   margin: rem(20) 0 clamp(rem(20), 4vw, rem(65));
+
+  &--white {
+    color: #ddd8d8;
+  }
 }

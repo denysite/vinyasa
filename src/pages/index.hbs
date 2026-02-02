@@ -3,6 +3,7 @@
   {{> page/head title="Home Page" scssFileName="index"}}
 
   <link rel="stylesheet" href="/src/scss/components/instructors.scss">
+  <link rel="stylesheet" href="/src/scss/components/gallery.scss">
 </head>
 
 <body>
@@ -164,17 +165,14 @@
 
     {{> page/instructors}}
 
-    <section class="gallery margin-top">
-      <div class="container">
-
-      </div>
-    </section>
+    {{> page/gallery isBig=false}}
   </main>
 
   {{> page/footer}}
   {{> page/script}}
   <script type='module' src="/src/js/home-slider.js"></script>
   <script type='module' src='/src/js/lib/data-href.js'></script>
+  <script type='module' src='/src/js/gallery.js'></script>
 </body>
 
 </html>
