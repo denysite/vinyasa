@@ -292,3 +292,104 @@
     }
   }
 }
+
+.faq {
+  --acc-bg: #dee5fe;
+  --acc-text: #1b1b25;
+  --acc-muted: #5a5a76;
+  --acc-gap: rem(20);
+
+  .faq__main {
+    margin-inline: auto;
+    display: grid;
+    gap: rem(20);
+    max-width: rem(913);
+  }
+
+  .faq__main-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* відстань між header і body */
+  }
+
+  .faq__item-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--acc-gap);
+
+    padding: rem(18) rem(25);
+    background: var(--acc-bg);
+    border-radius: rem(5);
+    color: var(--acc-text);
+    border: 0;
+    cursor: pointer;
+
+    font: inherit;
+    text-align: left;
+  }
+
+  .faq__item-header {
+    font-size: rem(22);
+    font-family: 'Roboto Medium';
+    line-height: 160%;
+    color: black;
+
+    @media (max-width: em(1020)) {
+      font-size: rem(17);
+    }
+  }
+
+  .faq__item-icon {
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: 0 0 1.25rem;
+  }
+
+  .faq__item-icon::before,
+  .faq__item-icon::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: rem(20);
+    height: rem(2);
+    background: var(--acc-text);
+    transform: translate(-50%, -50%);
+    border-radius: 999px;
+    transition:
+      transform 220ms ease,
+      opacity 220ms ease;
+  }
+
+  .faq__item-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .faq__main-item.is-open .faq__item-icon::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .faq__main-item.is-open .faq__item-icon::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .faq__item-content {
+    font-size: rem(22);
+    line-height: 160%;
+    color: #5a5757;
+    background-color: #eeeeee;
+    border-radius: rem(5);
+    height: 0;
+    overflow: hidden;
+
+    @media (max-width: em(1020)) {
+      font-size: rem(17);
+    }
+  }
+
+  .faq__item-inner {
+    padding: rem(23) clamp(rem(30), 6vw, rem(106)) rem(21) rem(30);
+  }
+}

@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   {{> page/head title="Home Page" scssFileName="index"}}
 
@@ -166,6 +167,90 @@
     {{> page/instructors}}
 
     {{> page/gallery isBig=false}}
+
+    <section class="faq margin-top">
+      <div class="container">
+        <h3 class="faq__title section-title">FAQ</h3>
+
+        <p class="faq__subtitle section-subtitle">FAQ for ease and clarity in your yoga experience at Vinyasa Studio.
+        </p>
+
+        <div class="faq__main" data-accordion='' data-single="true">
+          <div class="faq__main-item" data-acc-item=''>
+            <button class="faq__item-trigger" type="button" data-acc-trigger=''>
+              <span class="faq__item-header">Can I come to class in the evening?</span>
+              <span class="faq__item-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq__item-content" data-acc-content=''>
+              <div class="faq__item-inner">
+                Yes, you can come to classes in the evening. In the evenings, we offer hatha yoga, ashtanga yoga, and meditation classes. Come on by, we'll be happy to see you.
+              </div>
+            </div>
+          </div>
+          <div class="faq__main-item" data-acc-item=''>
+            <button class="faq__item-trigger" type="button" data-acc-trigger=''>
+              <span class="faq__item-header">How to choose the right class for your level of preparation?</span>
+              <span class="faq__item-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq__item-content" data-acc-content=''>
+              <div class="faq__item-inner">
+                Assess your knowledge and experience, and choose a class with the appropriate level of difficulty. Start with the basics and gradually move on to more advanced classes, taking into account your goals and interests.
+              </div>
+            </div>
+          </div>
+          <div class="faq__main-item" data-acc-item=''>
+            <button class="faq__item-trigger" type="button" data-acc-trigger=''>
+              <span class="faq__item-header">What should I wear to yoga class?</span>
+              <span class="faq__item-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq__item-content" data-acc-content=''>
+              <div class="faq__item-inner">
+                Choose comfortable clothing that allows freedom of movement. Stretch fabrics are preferable. Shoes are not required, but wear clean socks. 
+              </div>
+            </div>
+          </div>
+          <div class="faq__main-item" data-acc-item=''>
+            <button class="faq__item-trigger" type="button" data-acc-trigger=''>
+              <span class="faq__item-header">How long does it take to see results from practicing yoga?</span>
+              <span class="faq__item-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq__item-content" data-acc-content=''>
+              <div class="faq__item-inner">
+                Visible results from practicing yoga may appear after a few weeks. However, improving flexibility, strength, and mental well-being may require several months of regular practice.
+              </div>
+            </div>
+          </div>
+          <div class="faq__main-item" data-acc-item=''>
+            <button class="faq__item-trigger" type="button" data-acc-trigger=''>
+              <span class="faq__item-header">Can I practice yoga if I have injuries or limitations?</span>
+              <span class="faq__item-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq__item-content" data-acc-content=''>
+              <div class="faq__item-inner">
+                Yes, but with caution. Consult your doctor before starting yoga, especially if you have any injuries or limitations. Choose a suitable style of yoga and inform your instructor of your limitations so that they can adapt the practice accordingly.
+              </div>
+            </div>
+          </div>
+          <div class="faq__main-item" data-acc-item=''>
+            <button class="faq__item-trigger" type="button" data-acc-trigger=''>
+              <span class="faq__item-header">What are the benefits of meditation as part of yoga practice?</span>
+              <span class="faq__item-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="faq__item-content" data-acc-content=''>
+              <div class="faq__item-inner">
+                Meditation as part of yoga helps improve concentration, reduce stress, strengthen emotional well-being, and increase awareness. It also helps balance the mind and improve overall physical and mental health.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   {{> page/footer}}
@@ -173,6 +258,7 @@
   <script type='module' src="/src/js/home-slider.js"></script>
   <script type='module' src='/src/js/lib/data-href.js'></script>
   <script type='module' src='/src/js/gallery.js'></script>
+  <script type='module' src='/src/js/lib/accordeon.js'></script>
 </body>
 
 </html>
