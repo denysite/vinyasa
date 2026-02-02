@@ -120,7 +120,7 @@ header {
 
       &::before,
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         width: 100%;
@@ -166,14 +166,14 @@ header {
   padding-right: rem(19);
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     width: rem(11);
     height: rem(12);
-    background-image: url("/img/caret.svg");
+    background-image: url('/img/caret.svg');
     transition: all 0.3s ease;
     background-size: contain;
     background-repeat: no-repeat;
@@ -289,7 +289,7 @@ body.menu-opened {
         transform: rotate(45deg);
 
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           left: 0;
