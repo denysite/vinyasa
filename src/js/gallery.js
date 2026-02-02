@@ -11,8 +11,14 @@ const lightbox = new PhotoSwipeLightbox({
 lightbox.init();
 
 const openImgWidth = document.querySelector(galleryItem).dataset.imgWidth;
+document.querySelector(galleryItem).style.setProperty('--img-w', openImgWidth);
 
 document.querySelectorAll(`${galleryItem} a`).forEach((item) => {
+  item.insertAdjacentHTML(
+    'beforeend',
+    '<div class="gallery__item-hover"><img src="/img/gallery-zoom.svg" /><p>Zoom in</p></div>',
+  );
+
   const itemHeight = item.dataset.pswpHeight;
 
   if (openImgWidth && itemHeight) {
