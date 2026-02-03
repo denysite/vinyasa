@@ -1,0 +1,32 @@
+.scroll-top {
+  position: fixed;
+  right: rem(20);
+  bottom: rem(20);
+  width: rem(60);
+  height: rem(60);
+  border-radius: rem(5);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+
+  img {
+    width: rem(30);
+    height: rem(30);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
