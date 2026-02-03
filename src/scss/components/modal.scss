@@ -1,0 +1,105 @@
+.modal {
+  &-wrapper {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(41, 39, 39, 0.6);
+    z-index: 14;
+  }
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: rem(460);
+  width: 100%;
+  background-color: #fff;
+  border-radius: rem(5);
+  padding: rem(30);
+  padding-bottom: rem(51);
+  z-index: 15;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+    align-items: center;
+    padding-bottom: rem(25);
+    border-bottom: rem(1) solid #cfcece;
+  }
+
+  &__logo {
+    max-width: rem(150);
+    aspect-ratio: 150 / 41;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__close {
+    display: inline-block;
+    max-width: rem(30);
+    aspect-ratio: 1 / 1;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: rem(305);
+    margin-top: rem(32);
+    margin-inline: auto;
+    text-align: center;
+
+    .modal__title {
+      font-size: rem(28);
+      font-weight: 700;
+      color: black;
+
+      padding-bottom: rem(14);
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(53);
+        height: rem(4);
+        background-color: var(--color-primary);
+        border-radius: rem(5);
+      }
+    }
+
+    > form {
+      margin-top: rem(27);
+
+      > input {
+        border-radius: rem(5);
+        border: rem(1) solid #e1e1e1;
+        background-color: #eff3f9;
+        font-size: rem(16);
+
+        padding: rem(18) rem(21);
+        width: 100%;
+
+        margin-bottom: rem(20);
+      }
+
+      .modal__button {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}

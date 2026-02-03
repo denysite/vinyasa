@@ -1,0 +1,31 @@
+<div class="modal-wrapper">
+  <div class="modal">
+    <div class="modal__header">
+      <div class="modal__logo">
+        <img src="/img/logo-header.svg" alt="" />
+      </div>
+
+      <button class="modal__close"><img
+          src="/img/modal-close.svg"
+          alt=""
+        /></button>
+    </div>
+
+    <div class="modal__content">
+      <h4 class="modal__title">Sign up for a class</h4>
+
+      <form action="">
+        <input type="text" class="modal__name" placeholder="Your name *" />
+        <input
+          type="tel"
+          class="modal__phone"
+          required=""
+          pattern="^(\+1\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+          placeholder="You phone *"
+        />
+
+        <button class="modal__button blue-button">send</button>
+      </form>
+    </div>
+  </div>
+</div>
