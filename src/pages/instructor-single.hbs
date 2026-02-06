@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> page/head title="Ava Miller" scssFileName="instructor-single"}}
+
+	<link rel="stylesheet" href="/src/scss/components/instructors.scss">
+	<link rel="stylesheet" href="/src/scss/components/application.scss">
+</head>
+
+<body>
+	{{> page/header}}
+
+	<main>
+		{{> page/breadcrumbs isBig=true title="Ava Miller" second="Instructors"}}
+
+		<section class="hero">
+			<div class="container">
+				<div class="hero__img">
+					<img src="/img/content/instructor-single/ava-miller.png" alt="">
+				</div>
+
+				<div class="hero__content">
+					<h2 class="hero__title">Ava Miller</h2>
+
+					<div class="hero__text">
+						<p>Hello. My name is Ava Miller, and I am a Hatha Yoga instructor.</p>
+						<p>My love for yoga began as a personal discovery and has become an integral part of my life. With each
+							lesson, I strive to share not only the physical aspects of yoga, but also to help you find inner peace and
+							balance.</p>
+						<p>My training at various yoga schools and continuous self-improvement allow me to create classes filled
+							with energy, understanding, and support. My philosophy is to help you discover your strength, flexibility,
+							and inner light.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="social margin-top">
+			<div class="container">
+				<ul class="social__list">
+					<li class="social__list-item">
+						<a href="tel:79504575654" class='social__item-wrapper'>
+							<div class="social__item-img">
+								<img src="/img/phone.svg" alt="">
+							</div>
+							<p class="social__item-desc">Phone</p>
+							<p class="social__item-link">+7 950 457 5654</p>
+						</a>
+					</li>
+					<li class="social__list-item">
+						<a href="mailto:avamiler@gmail.com" class='social__item-wrapper'>
+							<div class="social__item-img">
+								<img src="/img/mail.svg" alt="">
+							</div>
+							<p class="social__item-desc">Email</p>
+							<p class="social__item-link">avamiler@gmail.com</p>
+						</a>
+					</li>
+					<li class="social__list-item">
+						<div class='social__item-wrapper'>
+							<div class="social__item-img">
+								<img src="/img/mail.svg" alt="">
+							</div>
+							<p class="social__item-desc">Socials</p>
+
+							<ul>
+								<li>
+									<a href="">
+										<img src="/img/whatsapp.svg" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="/img/telegram.svg" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="/img/twitter.svg" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		{{> page/instructors}}
+
+		{{> page/application}}
+	</main>
+
+	{{> page/footer}}
+	{{> page/script}}
+</body>
+
+</html>

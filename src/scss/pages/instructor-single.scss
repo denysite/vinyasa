@@ -1,0 +1,126 @@
+.hero {
+  padding: clamp(rem(30), 6vw, rem(100)) 0;
+  background-color: #f4f4f4;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(20);
+  }
+
+  &__img {
+    max-width: rem(488);
+    aspect-ratio: 488 / 523;
+    border-radius: rem(5);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: rem(554);
+
+    .hero__title {
+      color: black;
+      font-size: rem(42);
+      font-weight: 700;
+      line-height: 147%;
+      margin-bottom: clamp(rem(15), 2vw, rem(33));
+
+      @media (max-width: em(1020)) {
+        font-size: rem(33);
+      }
+
+      @media (max-width: em(425)) {
+        font-size: rem(26);
+      }
+    }
+
+    .hero__text {
+      line-height: 180%;
+      color: #757171;
+    }
+  }
+}
+
+.social {
+  .container {
+    background-color: var(--color-secondary);
+    border-radius: rem(5);
+    padding: rem(62) rem(15);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(rem(15), 3vw, rem(49));
+
+    @media (max-width: em(768)) {
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      color: white;
+      text-align: center;
+      border: rem(1) solid white;
+      border-radius: rem(5);
+      max-width: rem(250);
+      width: 100%;
+    }
+
+    .social__item {
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+        justify-content: center;
+        align-items: center;
+        padding: clamp(rem(25), 3vw, rem(55)) clamp(rem(10), 1.5vw, rem(25));
+
+        @media (hover: hover) {
+          &:hover {
+            color: white;
+          }
+        }
+
+        > ul {
+          display: flex;
+          gap: rem(22);
+
+          > li {
+            > a {
+              display: inline-block;
+              max-width: rem(19);
+              aspect-ratio: 1 / 1;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      &-img {
+        width: rem(35);
+        aspect-ratio: 1 / 1;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-desc {
+        font-size: rem(15);
+      }
+
+      &-link {
+        font-size: rem(21);
+        font-weight: 700;
+      }
+    }
+  }
+}
