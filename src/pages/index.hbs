@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/src/scss/components/instructors.scss">
   <link rel="stylesheet" href="/src/scss/components/gallery.scss">
   <link rel="stylesheet" href="/src/scss/components/application.scss">
+  <link rel="stylesheet" href="/src/scss/components/classes.scss">
 </head>
 
 <body>
@@ -117,54 +118,7 @@
       </div>
     </section>
 
-    <section class="classes margin-top">
-      <div class="container">
-        <h3 class="classes__title section-title">Classes</h3>
-
-        <p class="classes__subtitle section-subtitle">A variety of practices for all levels</p>
-
-        <div class="classes__list">
-          <ul>
-            <li class='classes__list-item'>
-              <a href="">
-                <div class="classes__item-img">
-                  <img src="/img/content/classes-1.png" alt="">
-                </div>
-
-                <h4 class="classes__item-title">Ashtanga yoga</h4>
-              </a>
-            </li>
-            <li class='classes__list-item'>
-              <a href="">
-                <div class="classes__item-img">
-                  <img src="/img/content/classes-2.png" alt="">
-                </div>
-
-                <h4 class="classes__item-title">Bikram yoga</h4>
-              </a>
-            </li>
-            <li class='classes__list-item'>
-              <a href="">
-                <div class="classes__item-img">
-                  <img src="/img/content/classes-3.png" alt="">
-                </div>
-
-                <h4 class="classes__item-title">Kundalini yoga</h4>
-              </a>
-            </li>
-            <li class='classes__list-item'>
-              <a href="">
-                <div class="classes__item-img">
-                  <img src="/img/content/classes-4.png" alt="">
-                </div>
-
-                <h4 class="classes__item-title">Hatha yoga</h4>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    {{> page/classes}}
 
     {{> page/instructors}}
 
