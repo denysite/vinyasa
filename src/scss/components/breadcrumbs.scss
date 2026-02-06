@@ -1,0 +1,36 @@
+.breadcrumbs {
+  background-color: #5b78cd;
+  width: 100vw;
+  text-align: center;
+  color: white;
+
+  .container {
+    padding: clamp(rem(20), 3vw, rem(57)) rem(15);
+  }
+
+  &__title {
+    font-size: rem(42);
+    font-weight: 700;
+    line-height: 126%;
+
+    @media (max-width: em(1020)) {
+      font-size: rem(33);
+    }
+
+    @media (max-width: em(425)) {
+      font-size: rem(26);
+    }
+  }
+
+  &__path {
+    font-size: rem(18);
+
+    @media (max-width: em(425)) {
+      font-size: rem(14);
+    }
+  }
+
+  &__current {
+    font-weight: 700;
+  }
+}

@@ -1,1 +1,15 @@
+<section class="breadcrumbs">
+  <div class="container">
+    <h1 class="breadcrumbs__title">{{title}}</h1>
 
+    <div class="breadcrumbs__path">
+      <span>Home Page</span>
+      /
+      {{#if isBig}}
+        <span>{{second}}</span>
+        /
+      {{/if}}
+      <span class="breadcrumbs__current">{{title}}</span>
+    </div>
+  </div>
+</section>
