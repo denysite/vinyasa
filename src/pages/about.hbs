@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 	{{> page/head title="About" scssFileName="about"}}
+
+	  <link rel="stylesheet" href="/src/scss/components/instructors.scss">
+  <link rel="stylesheet" href="/src/scss/components/application.scss">
+  <link rel="stylesheet" href="/src/scss/components/classes.scss">
 </head>
 <body>
 	{{> page/header}}
@@ -48,11 +52,20 @@
 
 		<section class="video margin-top">
 			<div class="container">
-				<div class="video__item">
+				<a class="video__item" href='https://www.youtube.com/watch?v=P8uHMMmWMHQ' target='_blank'>
 					<img src="/img/content/about/video.png" alt="">
-				</div>
+				</a>
 			</div>
 		</section>
+
+		{{> page/classes}}
+
+		{{> page/instructors}}
+
+		{{> page/application}}
 	</main>
+
+	  {{> page/footer}}
+  {{> page/script}}
 </body>
 </html>

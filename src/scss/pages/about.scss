@@ -109,14 +109,25 @@
 
 .video {
   &__item {
+    display: block;
     max-width: rem(793);
     aspect-ratio: 793 / 497;
     border-radius: rem(5);
     position: relative;
     margin-inline: auto;
+    overflow: hidden;
+
+    @media (hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
 
     &::before {
       content: '';
+      z-index: 2;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -131,6 +142,7 @@
 
     img {
       width: 100%;
+      transition: all 0.6s ease;
     }
   }
 }
