@@ -68,3 +68,41 @@
     }
   }
 }
+
+.stats {
+  background-color: var(--color-secondary);
+
+  .container {
+    padding: clamp(rem(20), 3vw, rem(57)) rem(15);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, rem(110));
+    gap: rem(20);
+    justify-content: space-between;
+
+    @media (max-width: em(600)) {
+      grid-template-columns: repeat(2, rem(110));
+      justify-content: center;
+      column-gap: rem(60);
+    }
+
+    &-item {
+      text-align: center;
+
+      .stats__item-title {
+        line-height: 147%;
+        font-size: rem(55);
+        font-weight: 700;
+        color: white;
+      }
+
+      .stats__item-desc {
+        line-height: 147%;
+        font-size: rem(20);
+        color: #c1c1c1;
+      }
+    }
+  }
+}
