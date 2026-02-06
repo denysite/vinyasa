@@ -106,3 +106,31 @@
     }
   }
 }
+
+.video {
+  &__item {
+    max-width: rem(793);
+    aspect-ratio: 793 / 497;
+    border-radius: rem(5);
+    position: relative;
+    margin-inline: auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: clamp(rem(50), 5vw, rem(87));
+      aspect-ratio: 1 / 1;
+      background-image: url('/img/play.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
