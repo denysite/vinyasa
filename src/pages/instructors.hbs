@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{> page/head title="Instructors" scssFileName="instructors"}}
+
+	  <link rel="stylesheet" href="/src/scss/components/instructors.scss">
+  <link rel="stylesheet" href="/src/scss/components/application.scss">
+</head>
+<body>
+	{{> page/header}}
+
+	<main>
+		{{> page/breadcrumbs title="Instructors"}}
+
+		<section class="hero">
+			<div class="container">
+				<div class="hero__img">
+					<img src="/img/content/instructors/hero.png" alt="">
+				</div>
+
+				<div class="hero__content">
+					<h2 class="hero__title">Our experienced yoga instructors</h2>
+
+					<div class="hero__text">
+						<p>Meet our inspiring instructors, ready to guide you through an exciting yoga journey.</p>
+						<p>With each of our instructors, you will discover new aspects of the practice and find inspiration and support on your path to physical and mental well-being. Learn more about our leaders and choose the style that best suits your goals and desires.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{{> page/instructors}}
+
+		{{> page/application}}
+	</main>
+
+	  {{> page/footer}}
+  {{> page/script}}
+</body>
+</html>
