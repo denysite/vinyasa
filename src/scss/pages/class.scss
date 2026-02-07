@@ -1,0 +1,84 @@
+.tabs {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: rem(20);
+
+    @media (max-width: em(600)) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__buttons {
+    max-width: rem(381);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: em(600)) {
+      max-width: 100%;
+    }
+
+    > button {
+      text-align: left;
+      width: 100%;
+      padding: rem(20) clamp(rem(20), 3vw, rem(50));
+      color: black;
+      font-size: rem(26);
+      background-color: #f4f0f0;
+
+      &:first-child {
+        border-top-left-radius: rem(5);
+        border-top-right-radius: rem(5);
+      }
+
+      &:last-child {
+        border-bottom-left-radius: rem(5);
+        border-bottom-right-radius: rem(5);
+      }
+
+      &.active {
+        color: white;
+        background-color: var(--color-primary);
+      }
+    }
+  }
+
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(rem(15), 3vw, rem(40));
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  .tab__content {
+    max-width: rem(793);
+    width: 100%;
+
+    &-img {
+      width: 100%;
+      aspect-ratio: 793 / 309;
+      border-radius: rem(5);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      font-size: rem(32);
+      font-weight: 700;
+      color: black;
+    }
+
+    &-text {
+      line-height: 179%;
+      color: #757171;
+    }
+  }
+}
