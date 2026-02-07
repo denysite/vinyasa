@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> page/head title="Gallery" scssFileName="gallery"}}
+
+	<link rel="stylesheet" href="/src/scss/components/application.scss">
+	<link rel="stylesheet" href="/src/scss/components/gallery.scss">
+
+	<style>
+		.gallery {
+			margin-top: 0 !important;
+		}
+
+		.application {
+			margin-top: 0 !important;
+		}
+	</style>
+</head>
+
+<body>
+	{{> page/header}}
+
+	<main>
+		{{> page/breadcrumbs isBig=true title="Ashtanga Yoga" second="Classes"}}
+
+		{{> page/gallery isBig=true}}
+
+		{{> page/application}}
+	</main>
+
+	{{> page/footer}}
+	{{> page/script}}
+	<script type="module" src="/src/js/gallery.js"></script>
+</body>
+
+</html>

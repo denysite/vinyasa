@@ -8,32 +8,76 @@
     </p>
 
     <div class="gallery__grid gallery-small" data-img-width="285">
-      <a href="/img/content/gallery-1.png" data-pswp-height="428">
-        <img src="/img/content/gallery-1.png" alt="First image" />
-      </a>
-      <a href="/img/content/gallery-2.png" data-pswp-height="233">
-        <img src="/img/content/gallery-2.png" alt="First image" />
-      </a>
-      <a href="/img/content/gallery-3.png" data-pswp-height="311">
-        <img src="/img/content/gallery-3.png" alt="First image" />
-      </a>
-      <a href="/img/content/gallery-4.png" data-pswp-height="371">
-        <img src="/img/content/gallery-4.png" alt="First image" />
-      </a>
-      <a href="/img/content/gallery-5.png" data-pswp-height="260">
-        <img src="/img/content/gallery-5.png" alt="First image" />
-      </a>
-      <a href="/img/content/gallery-6.png" data-pswp-height="455">
-        <img src="/img/content/gallery-6.png" alt="First image" />
-      </a>
-      <a href="/img/content/gallery-7.png" data-pswp-height="377">
-        <img src="/img/content/gallery-7.png" alt="First image" />
-      </a>
-      <a href="/img/content/gallery-8.png" data-pswp-height="317">
-        <img src="/img/content/gallery-8.png" alt="First image" />
-      </a>
+      {{#if isBig}}
+        <a href="/img/content/gallery-1.png" data-pswp-height="428">
+          <img src="/img/content/gallery-1.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-2.png" data-pswp-height="260">
+          <img src="/img/content/gallery-2.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-9.png" data-pswp-height="428">
+          <img src="/img/content/gallery-9.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-3.png" data-pswp-height="233">
+          <img src="/img/content/gallery-3.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-4.png" data-pswp-height="455">
+          <img src="/img/content/gallery-4.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-10.png" data-pswp-height="178">
+          <img src="/img/content/gallery-10.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-11.png" data-pswp-height="230">
+          <img src="/img/content/gallery-11.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-5.png" data-pswp-height="311">
+          <img src="/img/content/gallery-5.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-6.png" data-pswp-height="377">
+          <img src="/img/content/gallery-6.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-12.png" data-pswp-height="428">
+          <img src="/img/content/gallery-12.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-7.png" data-pswp-height="371">
+          <img src="/img/content/gallery-7.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-8.png" data-pswp-height="317">
+          <img src="/img/content/gallery-8.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-13.png" data-pswp-height="428">
+          <img src="/img/content/gallery-13.png" alt="First image" />
+        </a>
+      {{else}}
+        <a href="/img/content/gallery-1.png" data-pswp-height="428">
+          <img src="/img/content/gallery-1.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-2.png" data-pswp-height="260">
+          <img src="/img/content/gallery-2.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-3.png" data-pswp-height="233">
+          <img src="/img/content/gallery-3.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-4.png" data-pswp-height="455">
+          <img src="/img/content/gallery-4.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-5.png" data-pswp-height="311">
+          <img src="/img/content/gallery-5.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-6.png" data-pswp-height="377">
+          <img src="/img/content/gallery-6.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-7.png" data-pswp-height="371">
+          <img src="/img/content/gallery-7.png" alt="First image" />
+        </a>
+        <a href="/img/content/gallery-8.png" data-pswp-height="317">
+          <img src="/img/content/gallery-8.png" alt="First image" />
+        </a>
+      {{/if}}
     </div>
 
-    <a href="#" class="gallery__link blue-button">See all</a>
+    {{#if isBig}}{{else}}
+      <a href="#" class="gallery__link blue-button">See all</a>
+    {{/if}}
   </div>
 </section>
