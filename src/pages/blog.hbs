@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{{> page/head title="Blog" scssFileName="blog"}}
+</head>
+
+<body>
+	{{> page/header}}
+
+	<main class='blog'>
+		{{> page/breadcrumbs title="Blog"}}
+
+		<div class="container">
+			<div class="tabs">
+				<div class="tabs__content">
+					<ul class="tab-content active tabs__content-articles">
+						<li class="tabs__articles-item">
+							<a href="">
+								<div class="tabs__article-img">
+									<img src="/img/content/blog/first.png" alt="">
+								</div>
+
+								<div class="tabs__article-info">
+									<div class="tabs__article-date">21.01.2024</div>
+									<div class="tabs__article-comments">4 comments</div>
+								</div>
+
+								<h3 class="tabs__article-title">Embarking on a journey through yoga. A beginner's guide</h3>
+
+								<div class="tabs__article-text">
+									Explore the exciting world of yoga with this article designed for beginners. Learn how to start
+									practicing, refresh your understanding of yoga, and unravel the mysteries of this incredible art.
+								</div>
+							</a>
+						</li>
+						<li class="tabs__articles-item">
+							<a href="">
+								<div class="tabs__article-img">
+									<img src="/img/content/blog/second.png" alt="">
+								</div>
+
+								<div class="tabs__article-info">
+									<div class="tabs__article-date">21.01.2024</div>
+									<div class="tabs__article-comments">4 comments</div>
+								</div>
+
+								<h3 class="tabs__article-title">Healing through breathing. The role of pranayama in yoga practice</h3>
+
+								<div class="tabs__article-text">
+									Let's explore how proper breathing can be the key to physical and emotional well-being. This article
+									on pranayama will provide clear techniques and practical tips to help breathing become your reliable
+									guide in the world of yoga.
+								</div>
+							</a>
+						</li>
+						<li class="tabs__articles-item">
+							<a href="">
+								<div class="tabs__article-img">
+									<img src="/img/content/blog/third.png" alt="">
+								</div>
+
+								<div class="tabs__article-info">
+									<div class="tabs__article-date">21.01.2024</div>
+									<div class="tabs__article-comments">4 comments</div>
+								</div>
+
+								<h3 class="tabs__article-title">Fundamentals and benefits of the practice.</h3>
+
+								<div class="tabs__article-text">
+									Yoga is not just a physical practice, it is a way of life aimed at achieving harmony between body,
+									mind, and soul. In this article, we will explore the basics of yoga, including breathing exercises,
+									asanas, and meditation, to introduce you to the unique principles of this ancient discipline.
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="tabs__buttons">
+					<a href='#' class="tab-btn">&#60;</a>
+					<a href='#' class="tab-btn active" data-tab="1">1</a>
+					<a href='#' class="tab-btn" data-tab="2">2</a>
+					<a href='#' class="tab-btn" data-tab="3">3</a>
+					<a href='#' class="tab-btn" data-tab="4">4</a>
+					<a href='#' class="tab-btn" data-tab="5">5</a>
+					<a href='#' class="tab-btn">&#62;</a>
+				</div>
+			</div>
+
+			<div class="filters">
+				<div class="filters__search">
+					<p class="filters__search-title filter-title">Search</p>
+
+					<div class="filters__search-input">
+						<input type="text" placeholder='Search the site'>
+						<button>
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_16_3815)">
+									<path
+										d="M20.7434 19.5065L14.7716 13.5347C15.9283 12.1058 16.6248 10.2902 16.6248 8.31274C16.6248 3.72953 12.8956 0.000305176 8.31239 0.000305176C3.72919 0.000305176 0 3.72949 0 8.3127C0 12.8959 3.72923 16.6251 8.31243 16.6251C10.2899 16.6251 12.1055 15.9286 13.5344 14.7719L19.5062 20.7437C19.6768 20.9143 19.9008 21.0001 20.1248 21.0001C20.3488 21.0001 20.5728 20.9143 20.7434 20.7437C21.0856 20.4016 21.0856 19.8486 20.7434 19.5065ZM8.31243 14.8751C4.69345 14.8751 1.75 11.9317 1.75 8.3127C1.75 4.69372 4.69345 1.75026 8.31243 1.75026C11.9314 1.75026 14.8749 4.69372 14.8749 8.3127C14.8749 11.9317 11.9314 14.8751 8.31243 14.8751Z"
+										fill="white" />
+								</g>
+								<defs>
+									<clipPath id="clip0_16_3815">
+										<rect width="21" height="21" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<div class="filters__category">
+					<p class="filters__category-title filter-title"></p>
+					<ul>
+						<li>All (5)</li>
+						<li>Fitness (3)</li>
+						<li>Vinyasa (2)</li>
+						<li>Pranayama (3)</li>
+						<li>Asans (10)</li>
+						<li>Yoga philosophy (12)</li>
+					</ul>
+				</div>
+
+				<div class="filters__last">
+					<p class="filters__last-title filter-title"></p>
+
+					<ul class='filters__last-list'>
+						<li class='filters__last-item'>
+							<div class="filters__item-text"></div>
+							<div class="filters__item-date"></div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="filters__tags">
+					<p class="filters__tags-title filter-title"></p>
+
+					<ul>
+						<li>Balance</li>
+						<li>Fitness</li>
+						<li>Health</li>
+						<li>Asans</li>
+						<li>Chakras</li>
+						<li>Breathing</li>
+						<li>Zen</li>
+						<li>Meditation</li>
+						<li>Classes</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	{{> page/footer}}
+	{{> page/script}}
+</body>
+
+</html>
