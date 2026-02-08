@@ -300,5 +300,45 @@
         }
       }
     }
+
+    &__addComment {
+      &-title {
+        font-size: rem(24);
+        font-weight: 700;
+        color: black;
+        line-height: 170%;
+        margin-bottom: rem(20);
+      }
+
+      &-form {
+        display: flex;
+        flex-direction: column;
+        gap: rem(25);
+        max-width: rem(771);
+      }
+
+      &-input,
+      &-textarea {
+        padding: rem(22);
+        border: rem(1) solid #e1e1e1;
+        background-color: #eff3f9;
+        border-radius: rem(5);
+        font-size: rem(18);
+        color: #938d8d;
+
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+
+      &-textarea {
+        min-height: rem(218);
+        resize: none;
+      }
+
+      &-btn {
+        align-self: flex-start;
+      }
+    }
   }
 }
