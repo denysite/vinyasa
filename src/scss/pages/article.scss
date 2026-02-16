@@ -89,6 +89,22 @@
             margin-bottom: rem(15);
           }
         }
+
+        > ol {
+          > li {
+            padding-left: rem(20);
+            position: relative;
+            counter-increment: custom-counter;
+
+            &::before {
+              content: counter(custom-counter) '.';
+              position: absolute;
+              left: 0;
+              top: 0;
+              font-weight: 700;
+            }
+          }
+        }
       }
 
       &-tip {
