@@ -369,3 +369,23 @@ body.menu-opened {
     transform: translateX(0);
   }
 }
+
+@media (max-width: em(900)) {
+  .header__dropdown {
+    padding-right: 0;
+
+    &::after {
+      display: none;
+    }
+
+    .header__dropdown-menu {
+      display: none !important;
+      opacity: 0 !important;
+      animation: none !important;
+    }
+  }
+
+  .header__menu > ul > li:hover .header__dropdown-menu {
+    display: none !important;
+  }
+}
